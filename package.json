@@ -17,7 +17,6 @@
     "gen:runtime": "node scripts/convert-config.js",
     "gen:manifest": "node scripts/generate-manifest.js",
     "gen:version": "node scripts/generate-version.js",
-    "postbuild": "echo 'Build completed - sitemap generation disabled'",
     "postbuild": "npx @cloudflare/next-on-pages",
     "pages:build": "pnpm run build && pnpm run postbuild",  
     "prepare": "husky install"
@@ -67,7 +66,7 @@
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "autoprefixer": "^10.4.20",
-    "eslint": "^8.57.1",
+    "eslint": "^8.62.0",
     "eslint-config-next": "^14.2.23",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
@@ -91,5 +90,8 @@
       "prettier -w"
     ]
   },
-  "packageManager": "pnpm@10.14.0"
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=22.0.0"
+  }
 }
